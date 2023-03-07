@@ -1,9 +1,12 @@
  # The overengineerd project
 The fanciest way to calculate:
 
-> Y = fib(x)*x!*w
+> f(x) = fib(x)*x!*w
 
-where w is the weather now in celsius
+Where
+fib(x) is the Fibonacci number of x
+x! is x factorial
+And w is the weather now in celsius
 
   
 
