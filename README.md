@@ -13,4 +13,4 @@ And w is the weather now in celsius
 
   
 
-**I call it the I have no life equation**
+I call it the **I have no life** equation
