@@ -1,6 +1,5 @@
 from django.urls import reverse
 from django.test import Client
-import pytest
 
 def test_main_view():
     client = Client()
