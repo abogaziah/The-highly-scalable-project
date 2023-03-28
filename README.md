@@ -15,4 +15,6 @@ And w is the weather now in celsius
 
 I call it the **I have no life** equation
 
-![diag](https://github.com/abogaziah/The-overengineered-project/blob/main/diagram.png)
+<p align="center">
+  <img src="https://github.com/abogaziah/The-overengineered-project/blob/main/diagram.png" width="350" title="hover text">
+</p>
