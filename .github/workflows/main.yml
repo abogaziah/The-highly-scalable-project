@@ -7,8 +7,18 @@ jobs:
       run:
         working-directory: ./fib
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - run: pip install -r requirements.txt
-      - run: python manage.py migrate
-      - run: pytest --ds=fib.test_settings
+      - name: setup python
+        uses: |
+          actions/checkout@v2
+          actions/setup-python@v2
+
+      - name: install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Set up test database
+        run: |
+          python manage.py migrate
+          python manage.py makemigrations
+          python manage.py migrate
