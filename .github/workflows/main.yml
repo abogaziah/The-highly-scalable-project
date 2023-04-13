@@ -7,10 +7,13 @@ jobs:
       run:
         working-directory: ./fib
     steps:
-      - name: setup python
-        uses: |
-          actions/checkout@v2
-          actions/setup-python@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
 
       - name: install dependencies
         run: |
