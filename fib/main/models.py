@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+class Answer(models.Model):
+    num = models.IntegerField()
+    value = models.IntegerField()

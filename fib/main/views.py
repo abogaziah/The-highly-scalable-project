@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from .models import Answer
 
 
 def index(request):
@@ -7,9 +8,16 @@ def index(request):
 
 
 def fib(num: int):
-    if not num:
-        return 0
-    if num == 1:
-        return 1
+    try:
+        ans = Answer.objects.get(num=num)
+        return ans.value
+    except Answer.DoesNotExist:
+        if not num:
+            return 0
+        if num == 1:
+            return 1
 
-    return fib(num - 1) + fib(num - 2)
+        ans = fib(num - 1) + fib(num - 2)
+        temp = Answer(num=num, value=ans)
+        temp.save()
+        return ans
