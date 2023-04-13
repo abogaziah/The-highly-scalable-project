@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - run: pip install -r requirements.txt
-      - run: pytest --ds=test_settings
+      - run: pytest --ds=fib.test_settings
